@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/logos/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="AIsha" />
+    <meta property="og:description" content="чат AIsha" />
+    <meta property="og:url" content="https://oreshkof.ru" />
+    <meta property="og:image" content="https://oreshkof.ru/logos/og-logo.png" />
+    <meta property="og:site_name" content="AIsha" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="/style.css?v=2.0.4" />
+    <title>AIsha</title>
+  </head>
+  <body>
+    <section class="app">
+      <div class="first-container">
+        <div class="logo margin-bottom-20px">
+          <img src="/logos/main-logo.svg" alt="" />
+        </div>
+        <button class="btn-login main-btn">войти</button>
+        <h3>у вас нет учетной записи?</h3>
+        <button class="btn-register main-btn">зарегистрироваться</button>
+      </div>
+      <div class="login-container hidden">
+        <button class="btn-close">&times;</button>
+        <form class="login-form">
+          <p class="welcome">Вход:</p>
+          <input
+            type="text"
+            maxlength="10"
+            placeholder="telegramID"
+            id="user_login"
+            class="login__input login__input--user"
+          />
+          <input
+            type="password"
+            placeholder="пароль"
+            id="user_pass"
+            maxlength="12"
+            class="login__input login__input--pswrd"
+          />
+          <h4 class="login-error"></h4>
+          <p class="login-remember">
+            <label
+              ><input
+                name="rememberme"
+                type="checkbox"
+                id="rememberme"
+                value="forever"
+                tabindex="90"
+              />
+              Запомнить меня</label
+            >
+          </p>
+          <button class="sumbit-login-btn main-btn">войти</button>
+        </form>
+      </div>
+
+      <div class="main-section hidden">
+        <div class="btn-chat-panel"></div>
+        <div class="chat-session panel">
+          <div class="margin-bottom-60px"></div>
+          <div class="session" id="session">
+            <div class="session-history">
+              <h3>история сессий</h3>
+            </div>
+            <div class="margin-bottom-20px"></div>
+            <div class="btn-new-chat-panel">﹢ новый чат</div>
+            <ul id="chatList"></ul>
+            <div class="margin-bottom-20px"></div>
+            <div class="btn-del-chat-panel">очистить историю сессий</div>
+          </div>
+        </div>
+        <div class="main-body">
+          <div class="navbar margin-bottom-40px">
+            <div class="logo-nav">
+              <h1>AIsha</h1>
+              <h3>model 4.5 turbo</h3>
+            </div>
+            <div class="profile"></div>
+          </div>
+          <div id="chatContainer">
+            <!-- Сюда будут добавляться сообщения -->
+          </div>
+          <div class="request-panel">
+            <button id="micBtn" class="mic-btn request-btn">
+              <img src="/icons/mic_btn.svg" alt="" />
+            </button>
+            <textarea
+              id="userInput"
+              class="request__input"
+              rows="1"
+              placeholder="Введите ваш запрос"
+            ></textarea>
+            <button id="sendMessageBtn" class="submit-btn request-btn">
+              <img src="/icons/send_btn.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="unsupported-overlay" style="display: none">
+        На данный момент это разрешение не поддерживается. Пожалуйста, поверните
+        смартфон.
+      </div>
+    </section>
+    <script src="/script.js?v=2.0.3"></script>
+  </body>
+</html>
